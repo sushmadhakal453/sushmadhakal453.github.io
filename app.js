@@ -54,5 +54,5 @@ $$(".calbox").forEach(b => { b.querySelector(".calbtn").onclick = () => mount(b)
 $$(".seg button").forEach(b => b.onclick = () => { const box = $("#calBook"); $$(".seg button").forEach(x => x.setAttribute("aria-pressed", x === b)); if (box.dataset.ev === b.dataset.ev && box.dataset.on) return; box.dataset.ev = b.dataset.ev; if (box.dataset.on) mount(box); });
 const cio = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting && !e.target.dataset.on) { cio.unobserve(e.target); mount(e.target); } }), { rootMargin: "1500px" });
 $$(".calbox").forEach(b => cio.observe(b));
-addEventListener("load", () => (window.requestIdleCallback || setTimeout)(() => { loadCal(); Object.values(K.events).forEach(e => Cal("preload", { calLink: K.username + "/" + e })); }, 2000));
+addEventListener("load", () => setTimeout(() => { loadCal(); Object.values(K.events).forEach(e => Cal("preload", { calLink: K.username + "/" + e })); }, 2000));
 })();
