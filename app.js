@@ -34,11 +34,15 @@ const loadCal = () => { if (window.Cal) return;
   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, K.origin + "/embed/embed.js", "init");
 };
 let n = 0;
-const mount = box => { loadCal(); const ns = "c" + (++n), ev = box.dataset.ev;
-  box.innerHTML = `<div class="calwrap" id="${ns}"><p class="muted calload">${U.calLoading}</p></div>`;
+const mount = box => { loadCal(); const key = (box.dataset.ev || "x") + "|" + svc;
+  if (!box.dataset.on) { box.innerHTML = ""; box._c = {}; }
+  Object.values(box._c).forEach(el => el.hidden = true);
+  if (box._c[key]) { box._c[key].hidden = false; return; }
+  const ns = "c" + (++n), w = document.createElement("div"); w.className = "calwrap"; w.id = ns; w.innerHTML = `<p class="muted calload">${U.calLoading}</p>`; box.appendChild(w); box._c[key] = w;
   Cal("init", ns, { origin: K.origin });
   const config = { layout: "month_view", theme: "light" };
   if (svc) config.notes = U.service + ": " + svc;
+  const ev = box.dataset.ev;
   Cal.ns[ns]("inline", { elementOrSelector: "#" + ns, calLink: K.events[ev] ? K.username + "/" + K.events[ev] : K.username, config });
   Cal.ns[ns]("ui", { theme: "light", cssVarsPerTheme: { light: { "cal-brand": K.brand }, dark: { "cal-brand": K.brand } }, hideEventTypeDetails: false, layout: "month_view" });
   box.dataset.on = 1;
@@ -48,6 +52,7 @@ $$("[data-svc]").forEach(a => a.addEventListener("click", () => { pickSvc(a.data
 { const q = +new URLSearchParams(location.search).get("svc"); if (q && L.services[q-1]) pickSvc(L.services[q-1].t); }
 $$(".calbox").forEach(b => { b.querySelector(".calbtn").onclick = () => mount(b); });
 $$(".seg button").forEach(b => b.onclick = () => { const box = $("#calBook"); $$(".seg button").forEach(x => x.setAttribute("aria-pressed", x === b)); if (box.dataset.ev === b.dataset.ev && box.dataset.on) return; box.dataset.ev = b.dataset.ev; if (box.dataset.on) mount(box); });
-const cio = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting && !e.target.dataset.on) { cio.unobserve(e.target); mount(e.target); } }), { rootMargin: "300px" });
+const cio = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting && !e.target.dataset.on) { cio.unobserve(e.target); mount(e.target); } }), { rootMargin: "1500px" });
 $$(".calbox").forEach(b => cio.observe(b));
+addEventListener("load", () => (window.requestIdleCallback || setTimeout)(() => { loadCal(); Object.values(K.events).forEach(e => Cal("preload", { calLink: K.username + "/" + e })); }, 2000));
 })();
