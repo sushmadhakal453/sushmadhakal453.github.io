@@ -109,7 +109,7 @@ window.SITE = {
       ogLocale: "en_US"
     },
     ui: {
-      skip: "Skip to content", brandSub: "Fetal Medicine · Kathmandu", navAbout: "About", navServices: "Services", navHow: "How it works", navVideos: "Videos", navGuides: "Guides", navFaq: "FAQ", navContact: "Contact", book: "Book", langOther: "ने", langOtherLabel: "नेपालीमा हेर्नुहोस्", menu: "Menu",
+      skip: "Skip to content", brandSub: "Fetal Medicine Specialist", navAbout: "About", navServices: "Services", navHow: "How it works", navVideos: "Videos", navGuides: "Guides", navFaq: "FAQ", navContact: "Contact", book: "Book", langOther: "ने", langOtherLabel: "नेपालीमा हेर्नुहोस्", menu: "Menu",
       heroEyebrow: "Dr. Sushma Dhakal · Fetal Medicine Specialist in Kathmandu, Nepal", bookAppt: "Book Appointment", reqCounsel: "Request Counselling",
       photoAlt: "Dr. Sushma Dhakal, fetal medicine specialist in Kathmandu, Nepal, in a white coat with stethoscope",
       aboutEy: "About", meet: "Meet", qualH: "Qualifications", expH: "Experience", hlH: "Highlights",
@@ -198,7 +198,7 @@ window.SITE = {
       ogLocale: "ne_NP"
     },
     ui: {
-      skip: "मुख्य सामग्रीमा जानुहोस्", brandSub: "भ्रूण चिकित्सा · काठमाडौं", navAbout: "परिचय", navServices: "सेवाहरू", navHow: "प्रक्रिया", navVideos: "भिडियो", navGuides: "जानकारी", navFaq: "प्रश्नोत्तर", navContact: "सम्पर्क", book: "बुक गर्नुहोस्", langOther: "EN", langOtherLabel: "View in English", menu: "मेनु",
+      skip: "मुख्य सामग्रीमा जानुहोस्", brandSub: "भ्रूण चिकित्सा विशेषज्ञ", navAbout: "परिचय", navServices: "सेवाहरू", navHow: "प्रक्रिया", navVideos: "भिडियो", navGuides: "जानकारी", navFaq: "प्रश्नोत्तर", navContact: "सम्पर्क", book: "बुक गर्नुहोस्", langOther: "EN", langOtherLabel: "View in English", menu: "मेनु",
       heroEyebrow: "डा. सुष्मा ढकाल · भ्रूण चिकित्सा विशेषज्ञ, काठमाडौं, नेपाल", bookAppt: "अपोइन्टमेन्ट बुक गर्नुहोस्", reqCounsel: "परामर्श अनुरोध",
       photoAlt: "सेतो कोट र स्टेथोस्कोपमा डा. सुष्मा ढकाल, भ्रूण चिकित्सा विशेषज्ञ, काठमाडौं, नेपाल",
       aboutEy: "परिचय", meet: "भेट्नुहोस्", qualH: "योग्यता", expH: "अनुभव", hlH: "विशेष उपलब्धि",

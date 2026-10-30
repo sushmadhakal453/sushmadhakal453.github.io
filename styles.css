@@ -86,7 +86,7 @@ html[lang=ne] body{line-height:1.75}html[lang=ne] .eyebrow,html[lang=ne] .bs{let
 html[lang=ne] .heroart .stats b{font-size:1.65rem;line-height:1}
 .hphoto{object-position:50% 50%!important}
 .calpanel{max-width:1000px;margin:0 auto}.calq{font-weight:600;margin:0 0 10px}.calbox{min-height:520px;margin-top:18px;border-radius:18px;background:var(--tint);display:flex;align-items:center;justify-content:center;overflow:hidden}.calbox[data-on]{display:block;background:#fff}.calwrap{width:100%;min-height:520px;overflow:auto}.calload{text-align:center;padding:40px}.calalt{margin:16px 0 0;text-align:center;color:var(--mut)}.calalt a{color:var(--rose);font-weight:600}#counsel .calbox{min-height:460px}
-.calwrap:has(iframe) .calload{display:none}
+.calwrap:has(iframe) .calload{display:none}.calbox{overflow:visible!important}.calwrap,.calwrap iframe{touch-action:manipulation;position:relative;z-index:2}
 .i{width:1.15em;height:1.15em;flex:none;vertical-align:-.2em}.btn .i,.calalt .i{margin-right:8px}.btn .ar,.lnk .ar{margin:0 0 0 6px;width:1em;height:1em;transition:transform .2s}.btn:hover .ar,.lnk:hover .ar,.gcard:hover .ar{transform:translateX(3px)}
 .ic{color:var(--rose)}.ic .i{width:26px;height:26px}.chip .i{width:20px;height:20px;color:var(--rose);margin-right:2px}.fab{color:#fff}.fab .i{width:28px;height:28px}.vplay .i{width:26px;height:26px;margin-left:3px}
 .ctas.center{justify-content:center;margin-top:22px}.calalt a{display:inline-flex;align-items:center;margin:0 6px}.calalt .i{margin-right:5px}
