@@ -28,7 +28,8 @@ window.SITE = {
     phone2: "+977-9851194609",
     phoneHref: "tel:+9779849122491",
     whatsapp: "9779849122491",            // assumed WhatsApp-enabled; change if not
-    email: "dhakalsushma453@gmail.com"
+    email: "dhakalsushma453@gmail.com",
+    facebook: "https://www.facebook.com/share/1CH411CvG5/"
   },
   // Cal.com booking (free plan). Create these at cal.com, then change username/slugs here and run `npm run build`.
   cal: {
@@ -115,7 +116,7 @@ window.SITE = {
       aboutEy: "About", meet: "Meet", qualH: "Qualifications", expH: "Experience", hlH: "Highlights",
       svcEy: "Services", svcH: "Fetal medicine services in Kathmandu", svcSub: "Specialised scans and care for you and your baby.", bookThis: "Book this",
       howEy: "How it works", howH: "Simple, from booking to answers",
-      vidEy: "Free counselling videos", vidH: "Counselling videos for expecting families", vidSub: "Short, trusted explanations from the doctor on scans, screening and a healthy pregnancy.", playVideo: "Play counselling video", comingSoon: "Coming soon",
+      vidEy: "Free counselling videos", vidH: "Counselling videos for expecting families", vidSub: "Short, trusted explanations from the doctor on scans, screening and a healthy pregnancy.", playVideo: "Play counselling video", comingSoon: "Coming soon", shareFb: "Share on Facebook", fbProfile: "Facebook",
       guidesEy: "Health guides", guidesH: "Pregnancy scan guides", guidesSub: "Short, doctor-written guides to help you understand your scans and tests.", readGuide: "Read guide",
       apptEy: "Appointments", apptH: "Book your visit", p1: "1 Service", p2: "2 Date & time", p3: "3 Details", chooseSvc: "Choose a service", pickDT: "Pick a date & time", date: "Date", cont: "Continue", back: "Back",
       yourDetails: "Your details", fullName: "Full name", phone: "Phone", emailOpt: "Email (optional)", weeksOpt: "Weeks pregnant (optional)", notesOpt: "Notes (optional)", confirm: "Confirm booking", calLoad: "Show booking calendar", segLabel: "Appointment type", segConsult: "Consultation / Scan", segCounsel: "Counselling", calNote: "Choose Consultation / Scan or Counselling (in person or online), then pick a time. You get an instant email confirmation.", calAlt: "Prefer to talk first?", calCounsel: "Choose a counselling slot (in-person or online).", calLoading: "Loading calendar…",
@@ -204,7 +205,7 @@ window.SITE = {
       aboutEy: "परिचय", meet: "भेट्नुहोस्", qualH: "योग्यता", expH: "अनुभव", hlH: "विशेष उपलब्धि",
       svcEy: "सेवाहरू", svcH: "काठमाडौंमा भ्रूण चिकित्सा सेवाहरू", svcSub: "तपाईं र तपाईंको शिशुका लागि विशेष स्क्यान र हेरचाह।", bookThis: "यो बुक गर्नुहोस्",
       howEy: "प्रक्रिया", howH: "बुकिङदेखि उत्तरसम्म, सजिलै",
-      vidEy: "निःशुल्क परामर्श भिडियो", vidH: "गर्भवती परिवारका लागि परामर्श भिडियो", vidSub: "स्क्यान, स्क्रिनिङ र स्वस्थ गर्भावस्थाबारे डाक्टरबाट छोटो र भरपर्दो जानकारी।", playVideo: "परामर्श भिडियो चलाउनुहोस्", comingSoon: "छिट्टै आउँदैछ",
+      vidEy: "निःशुल्क परामर्श भिडियो", vidH: "गर्भवती परिवारका लागि परामर्श भिडियो", vidSub: "स्क्यान, स्क्रिनिङ र स्वस्थ गर्भावस्थाबारे डाक्टरबाट छोटो र भरपर्दो जानकारी।", playVideo: "परामर्श भिडियो चलाउनुहोस्", comingSoon: "छिट्टै आउँदैछ", shareFb: "फेसबुकमा सेयर गर्नुहोस्", fbProfile: "फेसबुक",
       guidesEy: "स्वास्थ्य जानकारी", guidesH: "गर्भावस्था स्क्यान सम्बन्धी जानकारी", guidesSub: "तपाईंका स्क्यान र परीक्षण बुझ्न डाक्टरले लेखेका छोटा लेखहरू।", readGuide: "पढ्नुहोस्",
       apptEy: "अपोइन्टमेन्ट", apptH: "भेटघाट बुक गर्नुहोस्", p1: "१ सेवा", p2: "२ मिति र समय", p3: "३ विवरण", chooseSvc: "सेवा छान्नुहोस्", pickDT: "मिति र समय छान्नुहोस्", date: "मिति", cont: "अगाडि बढ्नुहोस्", back: "पछाडि",
       yourDetails: "तपाईंको विवरण", fullName: "पूरा नाम", phone: "फोन", emailOpt: "इमेल (ऐच्छिक)", weeksOpt: "गर्भ कति हप्ताको (ऐच्छिक)", notesOpt: "थप जानकारी (ऐच्छिक)", confirm: "बुकिङ पुष्टि गर्नुहोस्", calLoad: "बुकिङ क्यालेन्डर हेर्नुहोस्", segLabel: "भेटको प्रकार", segConsult: "परामर्श / स्क्यान", segCounsel: "काउन्सेलिङ", calNote: "परामर्श/स्क्यान वा काउन्सेलिङ (भेटमै वा अनलाइन) छान्नुहोस्, अनि मिल्ने समय रोज्नुहोस्। इमेलमा तुरुन्तै पुष्टि आउँछ।", calAlt: "पहिले कुरा गर्न चाहनुहुन्छ?", calCounsel: "परामर्शको समय छान्नुहोस् (भेटमै वा अनलाइन)।", calLoading: "क्यालेन्डर लोड हुँदैछ…",

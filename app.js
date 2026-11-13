@@ -4,7 +4,7 @@ const $ = (s, r=document) => r.querySelector(s), $$ = (s, r=document) => [...r.q
 const esc = s => String(s ?? "").replace(/[&<>"']/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
 $$("[data-c]").forEach(e => { if (!e.textContent) e.textContent = L[e.dataset.c]; });
 $$("[data-cc]").forEach(e => { if (!e.textContent) e.textContent = C[e.dataset.cc]; });
-$("#phLink").href = C.phoneHref; $("#emLink").href = "mailto:" + C.email;
+$("#phLink").href = C.phoneHref; $("#emLink").href = "mailto:" + C.email; if ($("#fbLink") && C.facebook) $("#fbLink").href = C.facebook;
 const wa = "https://wa.me/" + C.whatsapp + "?text=" + encodeURIComponent(U.waText);
 $("#fab").href = wa; $("#yr").textContent = new Date().getFullYear();
 const B = Render.blocks(S, L);
@@ -18,6 +18,7 @@ const vio = new IntersectionObserver(es => es.forEach(async e => { if (!e.isInte
   box.querySelector(".vplay").onclick = () => { box.innerHTML = `<video controls autoplay playsinline preload="metadata" poster="${box.dataset.poster}" src="${box.dataset.src}"></video>`; };
 }), {rootMargin:"200px"});
 $$(".vbox").forEach(v => vio.observe(v));
+$$(".vshare[data-vpath]").forEach(a => { a.href = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(location.origin + a.dataset.vpath); });
 // nav
 const nav = $("#nav"); addEventListener("scroll", () => nav.classList.toggle("scrolled", scrollY > 20), {passive:true});
 $("#burger").onclick = e => { const o = nav.classList.toggle("open"); e.currentTarget.setAttribute("aria-expanded", o); };
